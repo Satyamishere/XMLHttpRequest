@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML</title>
+</head>
+<body>  
+    <div>
+        <ul id="images">
+            <li><img src="image1.jpg" id="img1" alt="Image 1"></li>
+            <li><img src="image2.jpg" id="img2" alt="Image 2"></li>
+            <li><img src="image3.jpg" id="img3" alt="Image 3"></li>
+            <li><img src="image4.jpg" id="img4" alt="Image 4"></li>
+        </ul>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <script>
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e)
+            if(e.target.tagName==='IMG'){
+                let x=e.target.parentNode
+                x.remove()
+            }
+        })
+    </script>
+</body>
+</html>

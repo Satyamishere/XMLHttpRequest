@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+</head>
+<body>
+    
+    <div>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </div>
+    <script>
+        let intervalID
+        const date=function(){
+            console.log(Date.now())
+        }
+        document.querySelector('#start').addEventListener('click',function(){
+             intervalID=setInterval(date,1000)
+        })
+
+
+        document.querySelector('#stop').addEventListener('click',function(){
+             clearInterval(intervalID)
+        })
+
+    </script>
+</body>
+</html>
